@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SuperDragon.Backend.Models;
 
 namespace SuperDragon.Backend.Data
 {
@@ -8,7 +9,6 @@ namespace SuperDragon.Backend.Data
         {
         }
 
-        // We will add DbSets (tables) here later as we learn, e.g.:
-        // public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

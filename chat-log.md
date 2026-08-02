@@ -26,3 +26,9 @@ Linked the local repository to GitHub and pushed our initial setup. Next step is
 
 6. Installed `MySql.EntityFrameworkCore` and `Microsoft.EntityFrameworkCore.Design`.
 7. Created `AppDbContext` and configured MySQL connection in `.NET Core`.
+
+**User:**
+Provided a screenshot of MySQL Workbench running locally.
+
+**Antigravity:**
+Created the first database entity (`User`) and added it to `AppDbContext`. Instructed the user to update their MySQL root password in `appsettings.json` so we can run our first migration.
