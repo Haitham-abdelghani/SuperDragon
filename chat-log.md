@@ -23,3 +23,6 @@ Provided GitHub URL: `https://github.com/Haitham-abdelghani/SuperDragon`
 
 **Antigravity:**
 Linked the local repository to GitHub and pushed our initial setup. Next step is setting up MySQL!
+
+6. Installed `MySql.EntityFrameworkCore` and `Microsoft.EntityFrameworkCore.Design`.
+7. Created `AppDbContext` and configured MySQL connection in `.NET Core`.
