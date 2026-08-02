@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SuperDragon.Backend.Data;
+using SuperDragon.Backend.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

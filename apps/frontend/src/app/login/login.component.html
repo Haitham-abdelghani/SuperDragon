@@ -1,0 +1,60 @@
+<div class="login-page">
+  <div class="login-page__glass-card">
+    
+    <div class="login-page__header">
+      <i class="pi pi-bolt login-page__logo"></i>
+      <h1 class="login-page__title">Super Dragon</h1>
+      <p class="login-page__subtitle">Welcome back! Please enter your details.</p>
+    </div>
+
+    <!-- Angular Reactive Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-page__form">
+      
+      <!-- Email Field -->
+      <div class="login-page__input-group">
+        <label for="email" class="login-page__label">Email</label>
+        <span class="p-input-icon-left login-page__input-wrapper">
+            <i class="pi pi-envelope"></i>
+            <input 
+              id="email" 
+              type="text" 
+              pInputText 
+              formControlName="email" 
+              placeholder="Enter your email" 
+              class="login-page__input"
+            />
+        </span>
+      </div>
+
+      <!-- Password Field -->
+      <div class="login-page__input-group">
+        <label for="password" class="login-page__label">Password</label>
+        <span class="p-input-icon-left login-page__input-wrapper">
+            <i class="pi pi-lock"></i>
+            <input 
+              id="password" 
+              type="password" 
+              pInputText 
+              formControlName="password" 
+              placeholder="Enter your password" 
+              class="login-page__input"
+            />
+        </span>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        pButton 
+        type="submit" 
+        label="Sign In" 
+        class="login-page__submit-btn p-button-raised"
+        [disabled]="loginForm.invalid">
+      </button>
+      
+      <p class="login-page__footer-text">
+        Don't have an account? <a href="#" class="login-page__link">Sign up here</a>
+      </p>
+
+    </form>
+  </div>
+</div>

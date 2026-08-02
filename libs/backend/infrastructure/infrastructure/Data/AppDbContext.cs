@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using SuperDragon.Backend.Models;
+using SuperDragon.Backend.Domain.Entities;
 
-namespace SuperDragon.Backend.Data
+namespace SuperDragon.Backend.Infrastructure.Data
 {
     public class AppDbContext : DbContext
     {

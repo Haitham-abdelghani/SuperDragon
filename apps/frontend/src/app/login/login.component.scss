@@ -1,0 +1,185 @@
+// Variables for a premium dark mode aesthetic
+$bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+$primary-color: #6366f1; // Indigo
+$primary-hover: #4f46e5;
+$text-light: #f8fafc;
+$text-muted: #94a3b8;
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+
+.login-page {
+  /* Full screen centered layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: $bg-gradient;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: $text-light;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+
+  // Background decoration (Micro-design touch)
+  &::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: $primary-color;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  &__glass-card {
+    /* The Block */
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    padding: 3rem 2.5rem;
+    
+    // Glassmorphism Effect
+    background: $glass-bg;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid $glass-border;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    
+    // Smooth entry animation
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__logo {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    
+    // Micro-animation on hover
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+  }
+
+  &__subtitle {
+    font-size: 0.95rem;
+    color: $text-muted;
+    margin: 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $text-light;
+  }
+
+  &__input-wrapper {
+    width: 100%;
+    
+    i {
+      color: $text-muted;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid $glass-border !important;
+    border-radius: 8px !important;
+    color: $text-light !important;
+    transition: all 0.3s ease !important;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color !important;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__submit-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.8rem !important;
+    border-radius: 8px !important;
+    background: $primary-color !important;
+    border: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+
+    &:hover:not(:disabled) {
+      background: $primary-hover !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4) !important;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: $text-muted;
+    margin-top: 1.5rem;
+  }
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: lighten($primary-color, 15%);
+    }
+  }
+}
+
+// Custom animation keyframes
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

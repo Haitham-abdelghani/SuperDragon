@@ -1,4 +1,4 @@
-namespace SuperDragon.Backend.Models
+namespace SuperDragon.Backend.Domain.Entities
 {
     public class User
     {
