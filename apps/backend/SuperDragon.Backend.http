@@ -1,0 +1,6 @@
+@SuperDragon.Backend_HostAddress = http://localhost:5189
+
+GET {{SuperDragon.Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

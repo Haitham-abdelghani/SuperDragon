@@ -2,7 +2,9 @@
   "name": "@super-dragon/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "nx g @nx-dotnet/core:restore"
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~22.0.4",
@@ -25,6 +27,7 @@
     "@angular/compiler-cli": "~22.0.4",
     "@angular/language-service": "~22.0.4",
     "@eslint/js": "^9.8.0",
+    "@nx-dotnet/core": "^3.0.2",
     "@nx/angular": "23.1.1",
     "@nx/devkit": "23.1.1",
     "@nx/eslint": "23.1.1",

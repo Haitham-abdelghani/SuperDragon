@@ -56,7 +56,8 @@
       "options": {
         "targetName": "lint"
       }
-    }
+    },
+    "@nx-dotnet/core"
   ],
   "generators": {
     "@nx/angular:application": {
