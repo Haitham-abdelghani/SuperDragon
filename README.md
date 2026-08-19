@@ -6,13 +6,23 @@
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
-## Run tasks
+## How to Run the Project
 
-To run the dev server for your app, use:
+This project is a monorepo containing a **React Frontend** and a **.NET Core Backend**, managed by Nx.
 
+### Running the Frontend (React)
+To start the development server for the React frontend (running on `http://localhost:4200`):
 ```sh
-npx nx serve frontend
+npm exec nx serve frontend
 ```
+
+### Running the Backend (.NET Core)
+To start the backend API (running on `https://localhost:7198` and `http://localhost:5246`):
+```sh
+npm exec nx serve backend
+```
+
+*Note: Ensure your local MySQL instance is running and your connection string in `apps/backend/appsettings.json` has the correct `root` password.*
 
 To create a production bundle:
 
